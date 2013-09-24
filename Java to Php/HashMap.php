@@ -135,18 +135,15 @@ class HashMap implements \Iterator {
     }
 
     /**
-     * Return all element in map as an associated array. Same as HashMap::toArray()
-     *
-     * @return array
+     * Retourne la HashMap sous forme de tableau
+     * @return HashMap
      */
     public function getAll() {
         return $this->_hashTable;
     }
 
     /**
-     * Returns a string list of all elements in map. The end line paramter will be appended to the end
-     * of each key-value pair.
-     *
+     * Retourne sous forme de string le tableau de map clef/valeur
      * @return String
      * @param String $endLine[optional]
      */
@@ -158,7 +155,6 @@ class HashMap implements \Iterator {
                 continue;
             }
             $string .= "$key : $value $endLine";
-
         }
         return $string;
     }
@@ -167,7 +163,7 @@ class HashMap implements \Iterator {
      * Ajouter tous les elements d'un tableau dans cette Map
      * @param array $source
      */
-    public function addArray($source) {
+    public function addArray(array $source) {
         if(!is_array($source)) {
             throw new Exception("Le parametre n'est pas un tableau");
         }
@@ -176,43 +172,25 @@ class HashMap implements \Iterator {
         }
     }
 
-    /* Iterator Methods: 
-    ==================================================================*/
+    // Methodes de l'Iterator 
+    
     public function rewind() {
         $this->_valid = (FALSE !== reset($this->_hashTable));
     }
 
-    /**
-     * Return the current array element
-     */
     public function current() {
         return current($this->_hashTable);
     }
-
-    /**
-     * Return the key of the current array element
-     */
 
     public function key() {
         return key($this->_hashTable);
     }
 
-    /**
-     * Move forward by one
-     * PHP's next() returns false if there are no more elements
-     */
     public function next() {
         $this->_valid = (FALSE !== next($this->_hashTable));
     }
 
-    /**
-     * Is the current element valid?
-     */
     public function valid() {
         return $this->_valid;
     }
-    /* Iterator Methods: 
-    ==================================================================*/
-
 }
-?>
