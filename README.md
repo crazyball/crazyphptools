@@ -16,7 +16,7 @@ are met:
    the documentation and/or other materials provided with the
    distribution.
 
- * Neither the name of Julien Ballestracci nor the names of his
+ * Neither the name of Loïc Ambrosini nor the names of his
    contributors may be used to endorse or promote products derived
    from this software without specific prior written permission.
 
