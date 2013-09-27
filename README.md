@@ -1,5 +1,9 @@
 crazyphptools
 =============
+
+EDITS : 
+27/09/2013 : Will be Merged with my new CPTools Projects. Check github.com/cptools for more informations
+
 ```
 Copyright (c) 2013, Loïc Ambrosini <crazyball@crazyball.fr>.
 All rights reserved.
